@@ -97,7 +97,6 @@ O design da interface foi planejado previamente no Figma, com a criação de wir
 	yarn dev
 	```
 	Acesse [http://localhost:5173](http://localhost:5173) no navegador.
-	```
 
 ## Screenshots
 
