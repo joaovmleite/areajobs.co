@@ -36,7 +36,7 @@ O design da interface foi planejado previamente no Figma, com a criação de wir
 - **Decisões visuais:** Paleta de cores, tipografia e espaçamentos definidos para um visual moderno e agradável.
 - **Ferramenta utilizada:** [Figma](https://figma.com/) para prototipação e documentação visual.
 
-![Wireframe no Figma](https://www.figma.com/design/t2RBtA2UQ22fbk0LdJs7yZ/areajobs.co?node-id=0-1&t=5u3zaTBjghkNfweB-1)  
+[Wireframe no Figma](https://www.figma.com/design/t2RBtA2UQ22fbk0LdJs7yZ/areajobs.co?node-id=0-1&t=5u3zaTBjghkNfweB-1)  
 
 ## Decisões Técnicas
 
