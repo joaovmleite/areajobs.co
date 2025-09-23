@@ -1,0 +1,36 @@
+.navbar {
+  width: 100%;
+  background-color: #ffffff; /* Or transparent, as per instructions */
+  border-bottom: 1px solid #e0e0e0; /* A subtle bottom border for separation */
+}
+
+.container {
+  max-width: 1095px;
+  margin: 0 auto;
+  height: 73px;
+  padding: 0 1rem; /* Add some padding for smaller screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Jost', sans-serif;
+  font-size: 36px;
+  font-weight: 600; /* SemiBold */
+  color: #000000;
+  text-decoration: none;
+}
+
+.button {
+  background-color: #ff8c00;
+  color: #ffffff;
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-weight: 600; /* SemiBold */
+  border: none;
+  border-radius: 200px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
