@@ -1,4 +1,4 @@
-# trampos.co / areajobs.co – Job Board Challenge
+# trampos.co / areajobs.co – Job Board
 
 Este repositório contém a solução para o desafio técnico de um job board, desenvolvido com React e Vite. Aqui você encontra as decisões técnicas, estrutura do projeto, principais funcionalidades e instruções para execução.
 
