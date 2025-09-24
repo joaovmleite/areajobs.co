@@ -1,111 +1,111 @@
 # trampos.co / areajobs.co – Job Board
 
-Este repositório contém a solução para o desafio técnico de um job board, desenvolvido com React e Vite. Aqui você encontra as decisões técnicas, estrutura do projeto, principais funcionalidades e instruções para execução.
+Este repositorio contiene la solución para el desafío técnico de una bolsa de trabajo, desarrollada con React y Vite. Aquí encontrarás las decisiones técnicas, estructura del proyecto, principales funcionalidades e instrucciones de ejecución.
 
-## Sumário
+## Índice
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Principais Funcionalidades](#principais-funcionalidades)
-- [Design e Layout](#design-e-layout)
-- [Decisões Técnicas](#decisões-técnicas)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Validação e Segurança](#validação-e-segurança)
-- [Como Executar](#como-executar)
-- [Screenshots](#screenshots)
-- [Considerações Finais](#considerações-finais)
+- [Sobre el Proyecto](#sobre-el-proyecto)
+- [Principales Funcionalidades](#principales-funcionalidades)
+- [Diseño y Layout](#diseño-y-layout)
+- [Decisiones Técnicas](#decisiones-técnicas)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Validación y Seguridad](#validación-y-seguridad)
+- [Cómo Ejecutar](#cómo-ejecutar)
+- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Consideraciones Finales](#consideraciones-finales)
 
 ---
 
-## Sobre o Projeto
+## Sobre el Proyecto
 
-O objetivo deste projeto é criar uma aplicação web para listagem e cadastro de vagas de emprego, utilizando React, Vite e Context API. O sistema permite visualizar, filtrar, pesquisar e cadastrar novas vagas, com dados persistidos em um arquivo JSON. O foco está em entregar uma solução funcional, clara, responsiva e de fácil manutenção.
+El objetivo de este proyecto es crear una aplicación web para listar y registrar ofertas de empleo, utilizando React, Vite y Context API. El sistema permite visualizar, filtrar, buscar y registrar nuevas ofertas, con datos persistidos en un archivo JSON. El enfoque está en entregar una solución funcional, clara, responsiva y fácil de mantener.
 
-## Principais Funcionalidades
+## Principales Funcionalidades
 
-- **Listagem de vagas:** Visualize vagas de emprego com detalhes como título, empresa, tipo de contratação, localidade, salário, responsável e descrição.
-- **Busca e filtro:** Pesquise vagas por título ou empresa e filtre por localidade (On-site, Remote, Hybrid).
-- **Cadastro de nova vaga:** Formulário completo para cadastrar uma nova vaga, com validação de campos obrigatórios e sanitização contra XSS.
-- **Context API:** Centralização do estado das vagas, facilitando o compartilhamento de dados e funções entre componentes.
-- **Interface responsiva:** Layout adaptado para diferentes tamanhos de tela, com design limpo e moderno.
+- **Listado de ofertas:** Visualiza ofertas de empleo con detalles como título, empresa, tipo de contratación, localidad, salario, responsable y descripción.
+- **Búsqueda y filtro:** Busca ofertas por título o empresa y filtra por localidad (Presencial, Remoto, Híbrido).
+- **Registro de nueva oferta:** Formulario completo para registrar una nueva oferta, con validación de campos obligatorios y sanitización contra XSS.
+- **Context API:** Centralización del estado de las ofertas, facilitando el intercambio de datos y funciones entre componentes.
+- **Interfaz responsiva:** Layout adaptado para diferentes tamaños de pantalla, con diseño limpio y moderno.
 
-## Design e Layout
+## Diseño y Layout
 
-O design da interface foi planejado previamente no Figma, com a criação de wireframes para todas as principais telas do sistema. O objetivo foi garantir uma experiência de usuário clara, intuitiva e responsiva, alinhada à proposta do projeto.
+El diseño de la interfaz fue planificado previamente en Figma, con la creación de wireframes para todas las pantallas principales del sistema. El objetivo fue garantizar una experiencia de usuario clara, intuitiva y responsiva, alineada con la propuesta del proyecto.
 
-- **Wireframes:** Serviram como guia visual para a implementação dos componentes e fluxos de navegação.
-- **Decisões visuais:** Paleta de cores, tipografia e espaçamentos definidos para um visual moderno e agradável.
-- **Ferramenta utilizada:** [Figma](https://figma.com/) para prototipação e documentação visual.
+- **Wireframes:** Sirvieron como guía visual para la implementación de los componentes y flujos de navegación.
+- **Decisiones visuales:** Paleta de colores, tipografía y espaciados definidos para un aspecto moderno y agradable.
+- **Herramienta utilizada:** [Figma](https://figma.com/) para prototipado y documentación visual.
 
-[Wireframe no Figma](https://www.figma.com/design/t2RBtA2UQ22fbk0LdJs7yZ/areajobs.co?node-id=0-1&t=5u3zaTBjghkNfweB-1)  
+[Wireframe en Figma](https://www.figma.com/design/t2RBtA2UQ22fbk0LdJs7yZ/areajobs.co?node-id=0-1&t=5u3zaTBjghkNfweB-1)  
 
-## Decisões Técnicas
+## Decisiones Técnicas
 
-- **Stack:** React + Vite, CSS Modules para estilização, Context API para gerenciamento de estado.
-- **Componentização:** Separação em componentes reutilizáveis (Navbar, Footer, JobList, JobDetails, CreateJob).
-- **Carregamento e persistência de dados:** As vagas são carregadas do arquivo `public/data/jobs.json` e novas vagas são registradas no contexto global (simulação de persistência).
-- **Validação e segurança:** Todos os campos do formulário de vaga possuem validação obrigatória e sanitização de entradas para evitar XSS.
-- **Responsividade:** Layout adaptado para desktop e mobile, com uso de CSS moderno.
+- **Stack:** React + Vite, CSS Modules para estilos, Context API para gestión de estado.
+- **Componentización:** Separación en componentes reutilizables (Navbar, Footer, JobList, JobDetails, CreateJob).
+- **Carga y persistencia de datos:** Las ofertas se cargan desde el archivo `public/data/jobs.json` y las nuevas ofertas se registran en el contexto global (simulación de persistencia).
+- **Validación y seguridad:** Todos los campos del formulario de oferta tienen validación obligatoria y sanitización de entradas para evitar XSS.
+- **Responsividad:** Layout adaptado para escritorio y móvil, usando CSS moderno.
 
-## Estrutura do Projeto
+## Estructura del Proyecto
 
 ```
 ├── public/
 │   └── data/
-│       └── jobs.json         # Base de dados das vagas
+│       └── jobs.json         # Base de datos de ofertas
 ├── src/
-│   ├── assets/               # Imagens e assets estáticos
+│   ├── assets/               # Imágenes y assets estáticos
 │   ├── components/
-│   │   ├── Footer/           # Rodapé
-│   │   ├── Jobs/             # Componentes relacionados a vagas
-│   │   │   ├── context/      # Contexto global das vagas
+│   │   ├── Footer/           # Pie de página
+│   │   ├── Jobs/             # Componentes relacionados a ofertas
+│   │   │   ├── context/      # Contexto global de ofertas
 |           ├── modules/      # Módulos de estilo CSS
-│   │   ├── Navbar/           # Barra de navegação
-│   ├── App.jsx               # Componente raiz
-│   └── main.jsx              # Ponto de entrada
+│   │   ├── Navbar/           # Barra de navegación
+│   ├── App.jsx               # Componente raíz
+│   └── main.jsx              # Punto de entrada
 ├── index.html                # HTML principal
-├── package.json              # Dependências e scripts
-└── README.md                 # Este arquivo
+├── package.json              # Dependencias y scripts
+└── README.md                 # Este archivo
 ```
 
-## Validação e Segurança
+## Validación y Seguridad
 
-- **Validação de campos obrigatórios:** O formulário de cadastro de vaga impede o envio de campos vazios.
-- **Sanitização contra XSS:** Todas as entradas do usuário são sanitizadas antes de serem processadas ou exibidas.
-- **Feedback imediato:** Alertas são exibidos ao usuário em caso de erro ou sucesso no cadastro.
+- **Validación de campos obligatorios:** El formulario de registro de oferta impide el envío de campos vacíos.
+- **Sanitización contra XSS:** Todas las entradas del usuario son sanitizadas antes de ser procesadas o mostradas.
+- **Feedback inmediato:** Se muestran alertas al usuario en caso de error o éxito en el registro.
 
-## Como Executar
+## Cómo Ejecutar
 
-1. **Pré-requisitos:**
-	- Node.js (18+ recomendado)
-	- pnpm, npm ou yarn
+1. **Requisitos previos:**
+    - Node.js (18+ recomendado)
+    - pnpm, npm o yarn
 
-2. **Instalação:**
-	```bash
-	pnpm install
-	# ou
-	npm install
-	# ou
-	yarn
-	```
+2. **Instalación:**
+    ```bash
+    pnpm install
+    # o
+    npm install
+    # o
+    yarn
+    ```
 
-3. **Execução em modo desenvolvimento:**
-	```bash
-	pnpm dev
-	# ou
-	npm run dev
-	# ou
-	yarn dev
-	```
-	Acesse [http://localhost:5173](http://localhost:5173) no navegador.
+3. **Ejecución en modo desarrollo:**
+    ```bash
+    pnpm dev
+    # o
+    npm run dev
+    # o
+    yarn dev
+    ```
+    Accede a [http://localhost:5173](http://localhost:5173) en el navegador.
 
-## Screenshots
+## Capturas de Pantalla
 
-![Página de Listagem de Vagas](https://i.postimg.cc/KvZY0LWD/snapshot-areajobs-listjobs.png)  
-![Página de Cadastro de Vaga](https://i.postimg.cc/8zczSGNF/snapshot-areajobs-createjob.png)
+![Página de Listado de Ofertas](https://i.postimg.cc/KvZY0LWD/snapshot-areajobs-listjobs.png)  
+![Página de Registro de Oferta](https://i.postimg.cc/8zczSGNF/snapshot-areajobs-createjob.png)
 
-## Considerações Finais
+## Consideraciones Finales
 
-Este projeto foi desenvolvido priorizando clareza, organização e experiência do usuário. O código está estruturado para facilitar manutenção e evolução. Sugestões e melhorias são bem-vindas!
+Este proyecto fue desarrollado priorizando claridad, organización y experiencia de usuario. El código está estructurado para facilitar el mantenimiento y evolución. ¡Sugerencias y mejoras son bienvenidas!
 
 ---
 
