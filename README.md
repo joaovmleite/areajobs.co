@@ -1,115 +1,85 @@
 # trampos.co / areajobs.co – Job Board
 
-Este repositorio contiene la solución para el desafío técnico de una bolsa de trabajo, desarrollada con React y Vite. Aquí encontrarás las decisiones técnicas, estructura del proyecto, principales funcionalidades e instrucciones de ejecución.
+This repository contains the solution for a technical challenge involving a job board, developed with React and Vite. Here you'll find the technical decisions, project structure, main features, and execution instructions.
 
-## Índice
+## Index
 
-- [Sobre el Proyecto](#sobre-el-proyecto)
-- [Principales Funcionalidades](#principales-funcionalidades)
-- [Diseño y Layout](#diseño-y-layout)
-- [Decisiones Técnicas](#decisiones-técnicas)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Validación y Seguridad](#validación-y-seguridad)
-- [Cómo Ejecutar](#cómo-ejecutar)
-- [Capturas de Pantalla](#capturas-de-pantalla)
-- [Consideraciones Finales](#consideraciones-finales)
+- [About the Project](#about-the-project)
+- [Main Features](#main-features)
+- [Design and Layout](#design-and-layout)
+- [Technical Decisions](#technical-decisions)
+- [Project Structure](#project-structure)
+- [Validation and Security](#validation-and-security)
+- [How to Run](#how-to-run)
+- [Screenshots](#screenshots)
+- [Final Considerations](#final-considerations)
 
 ---
 
-## Sobre el Proyecto
+## About the Project
 
-El objetivo de este proyecto es crear una aplicación web para listar y registrar ofertas de empleo, utilizando React, Vite y Context API. El sistema permite visualizar, filtrar, buscar y registrar nuevas ofertas, con datos persistidos en un archivo JSON. El enfoque está en entregar una solución funcional, clara, responsiva y fácil de mantener.
+The goal of this project is to create a web application to list and register job postings, using React, Vite, and Context API. The system allows users to view, filter, search, and register new job offers, with data persisted in a JSON file. The focus is to deliver a functional, clear, responsive, and easy-to-maintain solution.
 
-## Principales Funcionalidades
+## Main Features
 
-- **Listado de ofertas:** Visualiza ofertas de empleo con detalles como título, empresa, tipo de contratación, localidad, salario, responsable y descripción.
-- **Búsqueda y filtro:** Busca ofertas por título o empresa y filtra por localidad (Presencial, Remoto, Híbrido).
-- **Registro de nueva oferta:** Formulario completo para registrar una nueva oferta, con validación de campos obligatorios y sanitización contra XSS.
-- **Context API:** Centralización del estado de las ofertas, facilitando el intercambio de datos y funciones entre componentes.
-- **Interfaz responsiva:** Layout adaptado para diferentes tamaños de pantalla, con diseño limpio y moderno.
+- **Job Listing:** View job postings with details like title, company, contract type, location, salary, recruiter, and description.
+- **Search and Filter:** Search by job title or company and filter by location (On-site, Remote, Hybrid).
+- **New Job Registration:** Complete form to register a new job posting, with validation of required fields and XSS sanitization.
+- **Context API:** Centralized job offers state, making it easy to share data and functions between components.
+- **Responsive Interface:** Layout adapted for different screen sizes, with a clean and modern design.
 
-## Diseño y Layout
+## Design and Layout
 
-El diseño de la interfaz fue planificado previamente en Figma, con la creación de wireframes para todas las pantallas principales del sistema. El objetivo fue garantizar una experiencia de usuario clara, intuitiva y responsiva, alineada con la propuesta del proyecto.
+The interface design was previously planned in Figma, with the creation of wireframes for all main screens of the system. The goal was to ensure a clear, intuitive, and responsive user experience aligned with the project’s purpose.
 
-- **Wireframes:** Sirvieron como guía visual para la implementación de los componentes y flujos de navegación.
-- **Decisiones visuales:** Paleta de colores, tipografía y espaciados definidos para un aspecto moderno y agradable.
-- **Herramienta utilizada:** [Figma](https://figma.com/) para prototipado y documentación visual.
+- **Wireframes:** Served as a visual guide for implementing components and navigation flows.
+- **Visual Decisions:** Color palette, typography, and spacing defined for a modern and pleasant look.
+- **Tool Used:** [Figma](https://figma.com/) for prototyping and visual documentation.
 
-[Wireframe en Figma](https://www.figma.com/design/t2RBtA2UQ22fbk0LdJs7yZ/areajobs.co?node-id=0-1&t=5u3zaTBjghkNfweB-1)  
+[Wireframe on Figma](https://www.figma.com/design/t2RBtA2UQ22fbk0LdJs7yZ/areajobs.co?node-id=0-1&t=5u3zaTBjghkNfweB-1)  
 
-## Decisiones Técnicas
+## Technical Decisions
 
-- **Stack:** React + Vite, CSS Modules para estilos, Context API para gestión de estado.
-- **Componentización:** Separación en componentes reutilizables (Navbar, Footer, JobList, JobDetails, CreateJob).
-- **Carga y persistencia de datos:** Las ofertas se cargan desde el archivo `public/data/jobs.json` y las nuevas ofertas se registran en el contexto global (simulación de persistencia).
-- **Validación y seguridad:** Todos los campos del formulario de oferta tienen validación obligatoria y sanitización de entradas para evitar XSS.
-- **Responsividad:** Layout adaptado para escritorio y móvil, usando CSS moderno.
+- **Stack:** React + Vite, CSS Modules for styling, Context API for state management.
+- **Componentization:** Separated into reusable components (Navbar, Footer, JobList, JobDetails, CreateJob).
+- **Data Loading and Persistence:** Jobs are loaded from the `public/data/jobs.json` file and new jobs are registered in the global context (simulated persistence).
+- **Validation and Security:** All form fields are required and user inputs are sanitized to prevent XSS.
+- **Responsiveness:** Layout adapted for both desktop and mobile using modern CSS.
 
-## Estructura del Proyecto
 
-```
-├── public/
-│   └── data/
-│       └── jobs.json         # Base de datos de ofertas
-├── src/
-│   ├── assets/               # Imágenes y assets estáticos
-│   ├── components/
-│   │   ├── Footer/           # Pie de página
-│   │   ├── Jobs/             # Componentes relacionados a ofertas
-│   │   │   ├── context/      # Contexto global de ofertas
-|           ├── modules/      # Módulos de estilo CSS
-│   │   ├── Navbar/           # Barra de navegación
-│   ├── App.jsx               # Componente raíz
-│   └── main.jsx              # Punto de entrada
-├── index.html                # HTML principal
-├── package.json              # Dependencias y scripts
-└── README.md                 # Este archivo
-```
+## Validation and Security
 
-## Validación y Seguridad
+- **Required Field Validation:** The job registration form blocks submission of empty fields.
+- **XSS Sanitization:** All user inputs are sanitized before being processed or displayed.
+- **Instant Feedback:** Alerts are shown to the user in case of errors or successful submission.
 
-- **Validación de campos obligatorios:** El formulario de registro de oferta impide el envío de campos vacíos.
-- **Sanitización contra XSS:** Todas las entradas del usuario son sanitizadas antes de ser procesadas o mostradas.
-- **Feedback inmediato:** Se muestran alertas al usuario en caso de error o éxito en el registro.
+## How to Run
 
-## Cómo Ejecutar
+1. **Prerequisites:**
+    - Node.js (18+ recommended)
+    - pnpm, npm, or yarn
 
-1. **Requisitos previos:**
-    - Node.js (18+ recomendado)
-    - pnpm, npm o yarn
-
-2. **Instalación:**
+2. **Installation:**
     ```bash
     pnpm install
-    # o
+    # or
     npm install
-    # o
+    # or
     yarn
     ```
 
-3. **Ejecución en modo desarrollo:**
+3. **Development Mode:**
     ```bash
     pnpm dev
-    # o
+    # or
     npm run dev
-    # o
+    # or
     yarn dev
     ```
-    Accede a [http://localhost:5173](http://localhost:5173) en el navegador.
+    Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Capturas de Pantalla
+## Screenshots
 
-![Página de Listado de Ofertas](https://i.postimg.cc/KvZY0LWD/snapshot-areajobs-listjobs.png)  
-![Página de Registro de Oferta](https://i.postimg.cc/8zczSGNF/snapshot-areajobs-createjob.png)
+![Job Listings Page](https://i.postimg.cc/KvZY0LWD/snapshot-areajobs-listjobs.png)  
+![Job Registration Page](https://i.postimg.cc/8zczSGNF/snapshot-areajobs-createjob.png)
 
-## Consideraciones Finales
-
-Este proyecto fue desarrollado priorizando claridad, organización y experiencia de usuario. El código está estructurado para facilitar el mantenimiento y evolución. ¡Sugerencias y mejoras son bienvenidas!
-
----
-
-**Autor:** João Leite  
-**Blog:** [Astral Thoughts](https://astralfracture.bearblog.dev/)
-
----
